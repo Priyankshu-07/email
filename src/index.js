@@ -1,8 +1,9 @@
 const express = require("express");
-const EmailService = require("./src/utils/EmailService"); 
+const EmailService = require("./src/EmailService"); // Note: EmailService.js is in src/, not src/utils/
 const isRateLimited = require("./src/utils/rateLimiter"); 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
 app.use(express.json());
 
 app.post("/send", async (req, res) => {
@@ -18,13 +19,16 @@ app.post("/send", async (req, res) => {
   const result = await EmailService.sendEmail(req.body); 
   res.json(result);
 });
+
 app.get("/status/:id", (req, res) => {
   const result = EmailService.getEmailStatus(req.params.id);
   res.json(result);
 });
+
 app.get("/", (req, res) => {
   res.send("✅ Email Service is running!");
 });
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

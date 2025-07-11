@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "<<<<<<< HEAD Resilient Email Sending Service A lightweight, fault-tolerant email sending service built using Node.js. It uses two mock email providers and includes fallback, retry logic, rate limiting, and idempotency checks.",
+  "description": "Resilient Email Sending Service - A lightweight, fault-tolerant email sending service built using Node.js. It uses two mock email providers and includes fallback, retry logic, rate limiting, and idempotency checks.",
   "dependencies": {
     "express": "^5.1.0",
     "winston": "^3.17.0"

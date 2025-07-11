@@ -1,6 +1,6 @@
 const express = require("express");
-const EmailService = require("./src/EmailService"); // Note: EmailService.js is in src/, not src/utils/
-const isRateLimited = require("./src/utils/rateLimiter"); 
+const EmailService = require("./src/EmailService"); // EmailService.js is in src/
+const isRateLimited = require("./src/utils/rateLimiter"); // rateLimiter.js is in src/utils/
 const app = express();
 const PORT = process.env.PORT || 3000;
 
